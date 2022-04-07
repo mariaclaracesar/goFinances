@@ -11,13 +11,15 @@ import {
   User,
   UserGreeting,
   UserName,
-  Icon
+  Icon,
+  HighlightCards
 } from './styles'
 
 export function Dashboard(){
   return(
     <Container>
       <Header>
+
         <UserWrapper>
           <UserInfo>
             <Photo 
@@ -28,12 +30,16 @@ export function Dashboard(){
               <UserName>Maria</UserName>
             </User>
           </UserInfo>
-        <Icon name="power"/>
-          
-
+          <Icon name="power"/>
           </UserWrapper>
+          
         </Header>
-      <HighlightCard />
+
+      <HighlightCards>
+        <HighlightCard />
+        <HighlightCard />
+        <HighlightCard />
+      </HighlightCards>
     </Container>
   )
 }
