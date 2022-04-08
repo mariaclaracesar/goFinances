@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity } from 'react-native'
+import { TouchableOpacityProps } from 'react-native'
 
 import { 
   Container,
@@ -12,7 +12,7 @@ const icons= {
   down: 'arrow-down-circle'
 }
 
-interface Props extends TouchableOpacity{
+interface Props extends TouchableOpacityProps {
   type: 'up' | 'down';
   title: string;
   isActive: boolean;
