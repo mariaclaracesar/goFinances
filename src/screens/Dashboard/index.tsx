@@ -20,11 +20,11 @@ import {
 } from './styles'
 
 export interface DataListProps extends TransactionCardProps {
-  id: string
+  id: string;
 }
 
 export function Dashboard(){
-  const data: DataListProps = [
+  const data: DataListProps[] = [
       {
       id: '1',
       type: 'positive',
@@ -102,6 +102,7 @@ export function Dashboard(){
 
       <Transactions>
         <Title>Listagem</Title>
+
         <TransactionList 
           data={data}
           keyExtractor={item => item.id}
