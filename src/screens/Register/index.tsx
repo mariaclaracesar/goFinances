@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Input }  from '../../components/Form/Input'
 import { Button }  from '../../components/Form/Button'
 import { TransactionTypeButton }  from '../../components/Form/TransactionTypeButton'
+import { CategorySelect }  from '../../components/Form/CategorySelect'
 
 import { 
   Container,
@@ -39,18 +40,20 @@ export function Register(){
       <TransactionsTypes>
         <TransactionTypeButton 
           type="up"
-          title="Income"
+          title="Entrada"
           onPress={() =>handleTransactionsTypeSelect('up')}
           isActive={transactionType === 'up'}
         />
          <TransactionTypeButton 
           type="down"
-          title="Outcome"
+          title="Saída"
           onPress={() => handleTransactionsTypeSelect('down')}
           isActive={transactionType === 'down'}
         />
       </TransactionsTypes>
 
+
+        <CategorySelect title="Categoria"/>
       </Fields>
 
       <Button title="Enviar"/>
