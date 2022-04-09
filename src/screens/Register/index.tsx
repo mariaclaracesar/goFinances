@@ -71,7 +71,7 @@ export function Register(){
 
 
         <CategorySelectButton 
-          title="Categoria"
+          title={category.name}
           onPress={handleOpenSelectCategoryModal}
         />
       </Fields>
