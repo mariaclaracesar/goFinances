@@ -100,6 +100,7 @@ export function Register(){
       const currentData = data ? JSON.parse(data) : []
 
       const dataFormatted = [
+        ...currentData,
         newTransaction  
       ];
 
