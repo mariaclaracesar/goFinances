@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
+import  AsyncStorage from "@react-native-async-storage/async-storage";
+
 import { HistoryCard } from "../../components/HistoryCard";
 
 import {
@@ -8,6 +10,21 @@ import {
 } from './styles'
 
 export function Resume(){
+  
+  async function loadData() {
+    const dataKey = '@goFinances:transactions'
+    const response = await AsyncStorage.getItem(dataKey);
+    const responseFormatted = response ? JSON.parse(response) : []
+
+    const expensives = responseFormatted.filter(
+      expensive => expensive.type === 'negative'
+    )
+  }
+
+  useEffect(() => {
+    loadData()
+  },[])
+
   return(
     <Container>
       <Header>
