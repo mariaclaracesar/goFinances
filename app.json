@@ -1,8 +1,9 @@
 {
+  "name": "goFinances",
+  "displayName": "goFinances",
   "expo": {
     "name": "goFinances",
     "slug": "goFinances",
-    "schema": "goFinances",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
