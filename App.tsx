@@ -5,7 +5,8 @@ import { StatusBar } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components'
 
-import { NavigationContainer } from '@react-navigation/native'
+import { Routes } from './src/routes'
+
 import { SignIn } from './src/screens/SignIn'
 
 import { AuthProvider } from './src/hooks/auth'
@@ -35,14 +36,10 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <NavigationContainer>
-        <StatusBar barStyle="light-content"/>
-
-        <AuthProvider>
-          <SignIn />
-        </AuthProvider>
-
-      </NavigationContainer>
+      <StatusBar barStyle="light-content"/>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </ThemeProvider>
   )
 }
